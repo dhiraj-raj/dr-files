@@ -1,0 +1,155 @@
+##############################
+## Git Class Notes
+##############################
+
+Official Website: https://git-scm.com/
+
+Git Master = SVN Trunk = TFS Main
+
+Linus Torvalds => Inventor of Linux and Git
+
+Why VCS/SCM?
+  Versioning Capability
+  Automated Backup
+  Parallel Development / Collaboration
+  Auditing / Investigation
+
+
+VCS Types:
+    LVCS =>
+    CVCS => SVN, TFS, Accurev, Perforce, ClearCase
+    DVCS => Git, Mercurial
+
+Terminologies:
+
+Working Directory = Workspace
+
+
+Git   => GitHub / BitBucket / GitKraken, Tortoise Git / Smart Git / Gitlist / GitLab
+
+Git-as-a-Service
+
+Linux => Redhat/CentOS/Fedora, Ubuntu, Suse
+
+
+
+Licensing => Apache 2.0 / MIT
+
+
+System Restore
+
+GIT hub is remote repo
+========================
+Installation
+========================
+
+installation
+CentOS/RedHat:
+sudo yum install git
+
+Ubuntu:
+sudo apt-get install git
+
+Configuration:
+
+git config --global user.name "your name"
+git config --global user.email "your email"
+
+Source code Project = Git Repository
+========================
+Git Commands
+========================
+
+git init
+git status
+git add . (Also known as Staging)
+git commit -am "your commit message"
+    -a => add
+    -m => commit message
+git log
+git clone https://github.com/sk12k/test-dev.git
+
+git clone username@ipaddress:/path/to/repository
+
+git clone gitadmin@139.59.77.99:/root/gitrepos/edu-march
+
+
+git diff
+git clone
+git push
+git remote
+git pull
+
+git pull <remotename> <branchname>
+
+git pull origin master
+git pull newremote master
+
+
+Ignoring files in Git:
+  .gitignore        => to ignore files globally
+  ~.git/info/exlude => to ignore files locally
+
+========================
+Branching and Merging
+========================
+
+Why Branching?
+  Gives you the ability to break/fix things without affecting the stable code.
+  Parallel Development
+  Bug Fix / Enhancements
+
+git branch => to see all existing branches
+git branch newbr => to create a new branch named 'newbr'
+git checkout newbr => to switch to 'newbr' branch
+git checkout master => to switch to 'master' branch
+git merge newbr => to merge newbr into master branch
+git rebase newbr (read the blog below to understand more on merging vs rebasing)
+
+git stash => Stash away your changes
+git stash show => show all your changes stashed earlier
+git stash apply => apply stashed changes to current codebase
+git stash drop => remove/delete all your stashes (works selectively as well)
+Read the blog to understand more on Stashing operations on Git.
+git revert
+git reset
+
+========================
+git workflows
+========================
+
+  Centralized
+  Feature branching
+  Gitflow Workflow
+  Forking Workflow
+
+
+========================
+References
+========================
+
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+https://www.atlassian.com/git/tutorials/saving-changes/git-stash
+https://www.git-tower.com/learn/git/faq/save-changes-with-git-stash
+https://nvie.com/posts/a-successful-git-branching-model/
+
+
+
+========================
+Questions:
+========================
+
+Q. does git commit -am mean we don't need to do a git add .?
+No. First time you have to add using git add command.
+
+Q. .git is also called bare repo?
+No.
+
+Q. Can you please explain one more time how two developers work as local and remote repo if they do not use remote repo like github , bitbucket?
+
+
+
+
+
+
+.
